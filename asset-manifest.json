@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/happify/static/js/main.1d0b0951.js",
+    "static/js/453.ce675e83.chunk.js": "/happify/static/js/453.ce675e83.chunk.js",
+    "index.html": "/happify/index.html",
+    "main.1d0b0951.js.map": "/happify/static/js/main.1d0b0951.js.map",
+    "453.ce675e83.chunk.js.map": "/happify/static/js/453.ce675e83.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.1d0b0951.js"
+  ]
+}
