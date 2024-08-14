@@ -82,9 +82,9 @@ header {
 
 .logo-img {
   background: rgba(255, 255, 255, 0) url(../img/happify-logo.png) center / cover no-repeat;
-  width: 200px;
+  width: 50px;
   height: 40px;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 nav {
