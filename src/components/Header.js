@@ -43,10 +43,10 @@ function Header() {
           </button>
         </div>
       </div>
-      <div className='now-playing flex'>
-            <div>
-                  <FaMusic />
-            </div>
+      <div className='now-playing-cover'>
+            <FaMusic />
+      </div>
+      <div className='now-playing-info flex center'>
             <div className="logo-img"></div>
       </div>
       <div className='volume-panel flex space-around'>

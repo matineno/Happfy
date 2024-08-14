@@ -105,10 +105,16 @@ nav {
 
 }
 
-.now-playing {
+.now-playing-cover {
+  width:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.now-playing-info {
   width: 40%;
   background-color: var(--background-color-one);
-
 }
 
 .volume-panel {
