@@ -48,7 +48,7 @@ function Header() {
             <div className="logo-img"></div>
       </div>
       <div className='volume-panel flex space-around'>
-            <div className='volume flex'>
+            <div className='volume'>
                   <PiSpeakerSimpleNoneFill />
                         <input type="range" id="volume" name="volume" min="0" max="100" defaultValue="50" />
                   <PiSpeakerSimpleHighFill />
