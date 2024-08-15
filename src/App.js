@@ -5,18 +5,26 @@ import Playlist from './components/Playlist';
 import SpotifyEmbed from './components/SpotifyEmbed';
 import Header from './components/Header';
 import SpotifyArtist from './components/SpotifyArtist';
+import Menu from './components/Menu';
 
 function App() {
   return (
-    <div>
-      <header>
-        <Header />
-        <TopTracks />
-        <TopRecommendations />
-        <Playlist />
-        <SpotifyEmbed />
-        <SpotifyArtist />
-      </header>
+    <div className='flex body'>
+        <div className='menu-window'>
+          <Menu />
+        </div>
+        <div className='main-window'>
+          <header >
+            <Header />
+          </header>
+          <main >
+            <TopTracks />
+            <TopRecommendations />
+            <Playlist />
+            <SpotifyEmbed />
+            <SpotifyArtist />
+          </main>
+      </div>
     </div>
   );
 }

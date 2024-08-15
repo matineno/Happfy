@@ -21,7 +21,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="header flex space-around">
+    <div className="header-content">
       <div className='control-panel'>
         <div className='button'>
           <button>
@@ -30,7 +30,7 @@ function Header() {
           <button>
             <FaStepBackward size={18} title='Previous' />
           </button>
-          <button>
+          <button className='play-button'>
             <FaPlay size={20} title='Play' />
           </button>
           <button>
@@ -48,15 +48,21 @@ function Header() {
             <div className="logo-img"></div>
       </div>
       <div className='volume-panel flex space-around'>
-            <div className='flex'>
+            <div className='volume flex'>
                   <PiSpeakerSimpleNoneFill />
                         <input type="range" id="volume" name="volume" min="0" max="100" defaultValue="50" />
                   <PiSpeakerSimpleHighFill />
             </div>
-            <div className='flex gap-15'>
-            <SiAirplayaudio size={20}/>
-            <BsChatLeftQuote size={20}/>
-            <FaListUl size={20}/>
+            <div className='button'>
+              <button>
+                <SiAirplayaudio size={20}/>
+              </button>
+              <button>
+                <BsChatLeftQuote size={20}/>
+              </button>
+              <button>
+                <FaListUl size={20}/>
+              </button>
             </div>
       </div>
     </div>

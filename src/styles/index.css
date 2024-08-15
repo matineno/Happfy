@@ -1,14 +1,14 @@
 @import "./reset.css";
 
 :root {
-  --background-color-one: rgb(32, 32, 32);
+  --background-color-one: #202020;
   --background-color-two: rgb(36, 36, 36);
   --dialog-background-color: rgba(0, 0, 0, 0.877);
-  --font-color-one: rgb(240, 235, 235);
-  --font-color-two: rgb(28, 26, 26);
+  --font-color-one: #ffffff;
+  --font-color-two: #bcbcbc;
   --footer-background: rgba(251, 251, 251, 0);
   --background-mask: rgba(0, 0, 0, 0.7);
-  --action-button-color: #551985;
+  --action-button-color: rgb(55, 210, 70);
   --input-background-color: rgba(26, 26, 26, 0.863);
   --input-border-color: rgba(240, 235, 235, 0.831);
   --shadow: -16px 13px 19px -3px rgba(0, 0, 0, 0.122);
@@ -28,6 +28,11 @@ body {
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden;
+}
+
+.body {
+  width: 100svw;
+  margin: 0 auto;
 }
 
 /* Auxilary classes */
@@ -70,18 +75,26 @@ body {
   gap: 40px;
 }
 
+.menu-window {
+  width: 300px;
+}
+
+.main-window {
+  width: 100%;
+}
+
 /*---------------*/
 /*-----Header----*/
 /*---------------*/
 
 header {
-  height: 56px;
-  width: 100%;
-  color: var(--font-color-one);
+  color: var(--font-color-two);
   line-height: 56px;
-  z-index: 3;
-  position: absolute;
   background-color: var(--background-color-one);
+  .header-content {
+    width: (100% - 300px);
+    display: flex;
+  }
 }
 
 .logo-img {
@@ -99,19 +112,24 @@ nav {
   width: 30%;
   display: flex;
   justify-content: center;
-  button + button {
-    margin-left: 5px;
-  }
-  button {
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--font-color-one);
-    border: none;
-    margin-top: 20px;
-    padding: 5px 5px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+}
 
+button {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--font-color-two);
+  border: none;
+  margin-top: 20px;
+  padding: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.play-button {
+  color: var(--font-color-one);
+}
+
+button + button {
+  margin-left: 5px;
 }
 
 .now-playing-cover {
@@ -135,7 +153,12 @@ nav {
 
 .volume-panel {
   width: 30%;
-  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.volume {
+  margin: 25px 0px;
 }
 
 
@@ -163,7 +186,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: var(--font-color-one);
   cursor: pointer;
 }
 
@@ -171,6 +194,12 @@ input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: var(--font-color-one);
   cursor: pointer;
+}
+
+.option-panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
