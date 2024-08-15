@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
-import { FaStepBackward, FaStepForward, FaPlay, FaRandom, FaRedo, FaMusic, FaHeadphones} from 'react-icons/fa';
-import { PiSpeakerSimpleHighFill } from "react-icons/pi";
-import { PiSpeakerSimpleNoneFill } from "react-icons/pi";
+import { FaStepBackward, FaStepForward, FaPlay, FaRandom, FaRedo, FaMusic, FaListUl} from 'react-icons/fa';
+import { PiSpeakerSimpleHighFill, PiSpeakerSimpleNoneFill  } from "react-icons/pi";
 import { SiAirplayaudio } from "react-icons/si";
 import { BsChatLeftQuote } from "react-icons/bs";
-import { FaListUl } from "react-icons/fa";
 
 
 function Header() {
@@ -23,7 +21,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="header container flex space-around">
+    <div className="header flex space-around">
       <div className='control-panel'>
         <div className='button'>
           <button>
@@ -44,7 +42,7 @@ function Header() {
         </div>
       </div>
       <div className='now-playing-cover'>
-            <FaMusic />
+            <FaMusic size={20}/>
       </div>
       <div className='now-playing-info flex center'>
             <div className="logo-img"></div>
@@ -55,10 +53,10 @@ function Header() {
                         <input type="range" id="volume" name="volume" min="0" max="100" defaultValue="50" />
                   <PiSpeakerSimpleHighFill />
             </div>
-            <div className='flex gap-10'>
-            <SiAirplayaudio />
-            <BsChatLeftQuote />
-            <FaListUl />
+            <div className='flex gap-15'>
+            <SiAirplayaudio size={20}/>
+            <BsChatLeftQuote size={20}/>
+            <FaListUl size={20}/>
             </div>
       </div>
     </div>

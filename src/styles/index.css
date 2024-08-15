@@ -1,8 +1,8 @@
 @import "./reset.css";
 
 :root {
-  --background-color-one: rgb(255, 255, 255);
-  --background-color-two: rgb(0, 0, 0);
+  --background-color-one: rgb(32, 32, 32);
+  --background-color-two: rgb(36, 36, 36);
   --dialog-background-color: rgba(0, 0, 0, 0.877);
   --font-color-one: rgb(240, 235, 235);
   --font-color-two: rgb(28, 26, 26);
@@ -81,14 +81,14 @@ header {
   line-height: 56px;
   z-index: 3;
   position: absolute;
-  background-color: var(--background-color-two);
+  background-color: var(--background-color-one);
 }
 
 .logo-img {
   background: rgba(255, 255, 255, 0) url(../img/happify-logo.png) center / cover no-repeat;
   width: 50px;
   height: 40px;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 
 nav {
@@ -102,6 +102,15 @@ nav {
   button + button {
     margin-left: 5px;
   }
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--font-color-one);
+    border: none;
+    margin-top: 20px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 }
 
@@ -110,30 +119,37 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--background-color-one);
+  border: var(--background-color-two) solid 0.5px;
+  border-radius: 2px;
+  margin: 10px 0px;
 }
 
 .now-playing-info {
   width: 40%;
-  background-color: var(--background-color-one);
+  background-color: var(--background-color-two);
+  border: var(--background-color-two) solid 0.5px;
+  border-radius: 2px;
+  margin: 10px 0px;
 }
 
 .volume-panel {
   width: 30%;
-  margin-top: 20px;
+  margin-top: 26px;
 }
 
 
 input[type="range"] {
   -webkit-appearance: none; /* Remove default styling */
   width: 60%; /* Full-width */
-  height: 5px; /* Height of the slider */
+  height: 3px; /* Height of the slider */
   background: #dddddd00; /* Background color */
-  border: #dddddd solid 1px; /* Border color */
+  border: #dddddd solid 0.5px; /* Border color */
   border-radius: 5px; /* Rounded corners */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Slightly transparent */
   transition: opacity 0.2s; /* Transition effect */
-  margin-top: 5px;
+  margin-top: 6.5px;
 }
 
 input[type="range"]:hover {
@@ -144,8 +160,8 @@ input[type="range"]:hover {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #4CAF50;
   cursor: pointer;
