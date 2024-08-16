@@ -1,11 +1,7 @@
 import React from 'react';
-import TopTracks from './components/TopTracks';
-import TopRecommendations from './components/TopRecommendations';
-import Playlist from './components/Playlist';
-import SpotifyEmbed from './components/SpotifyEmbed';
 import Header from './components/Header';
-import SpotifyArtist from './components/Artists';
 import Menu from './components/Menu';
+import SpotifyEmbed from './components/SpotifyEmbed';
 
 function App() {
   return (
@@ -18,11 +14,7 @@ function App() {
             <Header />
           </header>
           <main >
-            <TopTracks />
-            <TopRecommendations />
-            <Playlist />
             <SpotifyEmbed />
-            <SpotifyArtist />
           </main>
       </div>
     </div>
