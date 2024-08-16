@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import useSpotifyToken from '../TokenProvider';
 
 const TopTracks = () => {
   const [tracks, setTracks] = useState([]);
 
-  const token = 'BQDg6BPgx_yK6tKYPheS9omMyEvV_kq2uSEnzDedNhu7RJTPKN-Ie701YhsLxo_Sk2N6DsOU_5IHrWlTupJzI_gabXduSgxN0F5NWns-iwIDzDnjGhfwqacPLQhFKvFmEWlFkPimPzlDSAFv9l6AXwSEjwH7Nnml7wEvloDZVthAPFaQxdlap296yC1wLQjThOXZkS300-bSBVd01SsVmwU56kL96pKmWwppo9NGh83FScVpn5ETT1fUsar1ESWyRBTPCnPuL56AHqJi1c4Ts9KxnmO4sw';
+  const token = useSpotifyToken();
 
   async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {

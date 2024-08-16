@@ -1,32 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import useSpotifyToken from '../TokenProvider';
 import axios from 'axios';
 
 function SpotifyArtist() {
     const [artist, setArtist] = useState(null);
-    const [token, setToken] = useState('');
+    const token = useSpotifyToken();
     const artistId = '2uaGbYYR6MVKSR371T3a7p?si=Ljf9NJWvQ_uqdKaQE2X8YQ';
-    useEffect(() => {
-        async function fetchToken() {
-            try {
-                const response = await axios.post(
-                    'https://accounts.spotify.com/api/token',
-                    new URLSearchParams({
-                        grant_type: 'client_credentials',
-                        client_id: 'your-client-id',
-                        client_secret: 'your-client-secret',
-                    }),
-                    {
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                    }
-
-                );
-                setToken(response.data.access_token);
-            } catch (error){}
-        }
-        fetchToken();
-    }, []);
 
     useEffect(() => {
         if (!token) return;

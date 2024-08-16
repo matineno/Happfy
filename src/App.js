@@ -4,7 +4,7 @@ import TopRecommendations from './components/TopRecommendations';
 import Playlist from './components/Playlist';
 import SpotifyEmbed from './components/SpotifyEmbed';
 import Header from './components/Header';
-import SpotifyArtist from './components/SpotifyArtist';
+import SpotifyArtist from './components/Artists';
 import Menu from './components/Menu';
 
 function App() {
