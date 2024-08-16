@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const clientId = 'client_id';
-const clientSecret = 'client_secret';
+const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+const clientSecret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
 
 const useSpotifyToken = () => {
   const [token, setToken] = useState(null);
