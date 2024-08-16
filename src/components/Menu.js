@@ -7,9 +7,6 @@ import { BsGrid3X3Gap } from "react-icons/bs";
 import { AiOutlineSpotify } from "react-icons/ai";
 
 function Menu() {
-
-
-
      return (
         <div>
             <div className="header"></div>
@@ -49,5 +46,4 @@ function Menu() {
         </div>
     );
 }
-
 export default Menu;

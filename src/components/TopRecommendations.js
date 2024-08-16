@@ -3,7 +3,6 @@ import useSpotifyToken from '../TokenProvider';
 
 function TopRecommendations() {
     const [recommendations, setRecommendations] = useState([]);
-
     const token = useSpotifyToken();
 
     async function fetchWebApi(endpoint, method, body) {

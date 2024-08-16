@@ -23,15 +23,24 @@ const useSpotifyToken = () => {
             },
           }
         );
-        setToken(response.data.access_token);
+        const fetchedToken = response.data.access_token;
+        console.log('Fetched Token:', fetchedToken);
+        setToken(fetchedToken);
       } catch (error) {
-        console.error('Error fetching the token:', error);
+        console.error('Error fetching the token: TokenProvider', error);
       }
     };
 
     fetchToken();
   }, []);
 
+  // Log token only after it's been fetched
+  useEffect(() => {
+    if (token) {
+      console.log('Token after fetch:', token);
+    }
+  }, [token]);
+  
   return token;
 };
 

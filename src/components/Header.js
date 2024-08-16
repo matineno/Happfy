@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
+import useSpotifyToken from '../TokenProvider';
 import { FaStepBackward, FaStepForward, FaPlay, FaRandom, FaRedo, FaMusic, FaListUl} from 'react-icons/fa';
 import { PiSpeakerSimpleHighFill, PiSpeakerSimpleNoneFill  } from "react-icons/pi";
 import { SiAirplayaudio } from "react-icons/si";
@@ -6,6 +8,30 @@ import { BsChatLeftQuote } from "react-icons/bs";
 
 
 function Header() {
+  const token = useSpotifyToken();
+  
+  const playTrack = async () => {
+    try {
+      const response =await axios.put(
+        'https://api.spotify.com/v1/me/player/play',
+        {
+          context_uri: 'spotify:album:5ht7ItJgpBH7W6vJ5BqpPr',
+          offset: { position: 5 },
+          position_ms: 0,
+        },
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+
+      console.log('Play Track Response:', response.data);
+    } catch (error) {
+      console.error('Error playing track:', error);
+    }
+  };
   useEffect(() => {
     const volumeSlider = document.getElementById('volume');
 
@@ -30,7 +56,7 @@ function Header() {
           <button>
             <FaStepBackward size={18} title='Previous' />
           </button>
-          <button className='play-button'>
+          <button className='play-button' onClick={playTrack}>
             <FaPlay size={20} title='Play' />
           </button>
           <button>

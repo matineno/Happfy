@@ -2,13 +2,18 @@ import React, { useState, useEffect } from 'react';
 import useSpotifyToken from '../TokenProvider';
 
 function Playlist() {
-    const [playlist, setPlaylist] = useState(null); // Start with null
-    const [loading, setLoading] = useState(true); // Added loading state
-    const [error, setError] = useState(null); // Added error state
+    const [playlist, setPlaylist] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const token = useSpotifyToken();
 
     async function fetchWebApi(endpoint, method, body) {
+        if (!token) {
+            setError('No valid token available');
+            return;
+        }
+
         try {
             const res = await fetch(`https://api.spotify.com/${endpoint}`, {
                 headers: {
@@ -17,7 +22,14 @@ function Playlist() {
                 method,
                 body: body ? JSON.stringify(body) : undefined,
             });
+
+            if (res.status === 401) {
+                setError('Unauthorized. Please check your token.');
+                throw new Error('Unauthorized');
+            }
+            
             if (!res.ok) throw new Error(`Error: ${res.statusText}`);
+            
             return await res.json();
         } catch (error) {
             setError(error.message);
@@ -34,7 +46,8 @@ function Playlist() {
 
     async function createPlaylist(tracksUri) {
         try {
-            const { id: user_id } = await fetchWebApi('v1/me', 'GET');
+            const user = await fetchWebApi('v1/me', 'GET');
+            const user_id = user.id;
             const playlist = await fetchWebApi(
                 `v1/users/${user_id}/playlists`, 'POST', {
                 "name": "My recommendation playlist",
@@ -56,6 +69,12 @@ function Playlist() {
 
     useEffect(() => {
         async function fetchPlaylist() {
+            if (!token) {
+                setError('No valid token available');
+                setLoading(false);
+                return;
+            }
+
             try {
                 const createdPlaylist = await createPlaylist(tracksUri);
                 setPlaylist(createdPlaylist);
@@ -67,7 +86,7 @@ function Playlist() {
         }
 
         fetchPlaylist();
-    }, []);
+    }, [token]);
 
     return (
         <div>
