@@ -1,7 +1,7 @@
 import React from 'react';
 
 function SpotifyEmbed() {
-    const playlistId = '7cugIUy78m97cVRJ5YCgk0';
+    const playlistId = '66j1ZQ1KVMoXj3zQmO23d6';
 
     return (
         <iframe
@@ -13,6 +13,7 @@ function SpotifyEmbed() {
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
+            className='spotify-embeded'
         />
     );
 }

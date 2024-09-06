@@ -13,7 +13,7 @@ function App() {
           <header >
             <Header />
           </header>
-          <main >
+          <main>
             <SpotifyEmbed />
           </main>
       </div>
