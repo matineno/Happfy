@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useSpotifyToken from '../TokenProvider';
 import axios from 'axios';
 
-function SpotifyArtist() {
+function Artist(props) {
     const [artist, setArtist] = useState(null);
     const token = useSpotifyToken();
     const artistId = '2uaGbYYR6MVKSR371T3a7p?si=Ljf9NJWvQ_uqdKaQE2X8YQ';
@@ -42,4 +42,4 @@ function SpotifyArtist() {
     );
 }
 
-export default SpotifyArtist;
+export default Artist;

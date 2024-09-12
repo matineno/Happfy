@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { IoSearch, IoAlbumsOutline, IoMusicalNoteSharp } from "react-icons/io5";
 import { GoHomeFill } from "react-icons/go";
 import { IoIosRadio, IoMdStar } from "react-icons/io";
@@ -17,30 +18,66 @@ function Menu() {
             <section>
                 <h3>Happify Music</h3>
                 <ul>
-                    <li className="flex"><GoHomeFill />Home</li>
-                    <li className="flex"><IoIosRadio />Radio</li>
+                    <li>
+                        <Link className="flex" to="/home">
+                            <GoHomeFill />Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="flex" to="/radio">
+                            <IoIosRadio />Radio
+                        </Link>
+                    </li>
                 </ul>
             </section>
             <section>
                 <h3>Library</h3>
                 <ul>
-                    <li className="flex"><LuClock9 />Recently Added</li>
-                    <li className="flex"><GiMicrophone />Artists</li>
-                    <li className="flex"><IoAlbumsOutline />Albums</li>
-                    <li className="flex"><IoMusicalNoteSharp />Songs</li>
+                    <li>
+                        <Link className="flex" to="/recentlyadded">
+                            <LuClock9 />Recently Added
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="flex" to="/artists">
+                            <GiMicrophone />Artists
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="flex" to="/albums">
+                            <IoAlbumsOutline />Albums
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="flex" to="/songs">
+                            <IoMusicalNoteSharp />Songs
+                        </Link>
+                    </li>
                 </ul>
             </section>
             <section>
                 <h3>Store</h3>
                 <ul>
-                    <li className="flex"><AiOutlineSpotify />Spotify Store</li>
+                    <li>
+                        <Link className="flex" to="/spotifystore">
+                            <AiOutlineSpotify />Spotify Store
+                        </Link>
+                    </li>
                 </ul>
             </section>
             <section>
                 <h3>Playlists</h3>
                 <ul>
-                    <li className="flex"><BsGrid3X3Gap />All Playlists</li>
-                    <li className="flex"><IoMdStar />Favourite Songs</li>
+                    <li className="flex">
+                        <Link className="flex" to="/allplaylists">
+                            <BsGrid3X3Gap />All Playlists
+                        </Link>
+                    </li>
+                    <li className="flex">
+                        <Link className="flex" to="/favouritesongs">
+                            <IoMdStar />Favourite Songs
+                        </Link>
+                    </li>
                 </ul>
             </section>
         </div>
