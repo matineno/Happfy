@@ -237,9 +237,9 @@ input[type="range"]::-moz-range-thumb {
 /*---------------*/
 
 main {
+  background-color: var(--background-color-two);
   position: relative;
   height: 100vh;
-
 }
 
 .search-box {
@@ -288,6 +288,7 @@ section {
 
 .home-container {
   width: (100vw - 240px);
+  margin: 0 auto;
   padding: 20px;
   background-color: var(--background-color-two);
   h3 {
@@ -300,8 +301,69 @@ section {
     border-radius: 5px;
 
   }
-  div + div {
+  
+}
+
+.playlist-images {
+  display: flex;
+  width: 100%;
+  a + a {
     margin-left: 20px;
-    border-radius: 20px;
   }
+}
+
+.playlist-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  h4 {
+    color: var(--font-color-one);
+    margin: 10px 0px;
+  }
+  p {
+    margin: 10px 0px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 20px 0px;
+  }
+}
+
+.playlist {
+  margin: 0px 40px;
+  background-color: var(--background-color-two);
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      color: var(--font-color-one);
+    }
+    td {
+      padding: 5px 5px;
+      color: var(--font-color-two);
+      vertical-align: middle;
+    }
+    tr:hover {
+      background-color: var(--background-color-one);
+    }
+  }
+}
+
+.track-image {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+  }
+}
+
+.featured-artist {
+  color: var(--font-color-two);
+  font-size: 12px;
 }

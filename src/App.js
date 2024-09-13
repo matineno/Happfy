@@ -12,6 +12,7 @@ import Songs from './pages/Songs';
 import SpotifyStore from './pages/SpotifyStore';
 import AllPlaylists from './pages/AllPlaylists';
 import FavouriteSongs from './pages/FavouriteSongs';
+import Playlist from './pages/Playlist';
 
 function App() {
   return (
@@ -36,9 +37,10 @@ function App() {
               <Route path='/spotifystore' element={<SpotifyStore />} />
               <Route path='/allplaylists' element={<AllPlaylists />} />
               <Route path='/favouritesongs' element={<FavouriteSongs />} />
+              <Route path='/playlist/:playlistId' element={<Playlist />} />
               
               {/* Add a default route that redirects to Home */}
-              <Route path='/' element={<Navigate to="/home" />} />
+              <Route path='/happify' element={<Navigate to="/home" />} />
             </Routes>
             <SpotifyEmbed />
           </main>
