@@ -38,6 +38,11 @@ body {
   position: absolute;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 /* Auxilary classes */
 
 .container {
@@ -254,6 +259,11 @@ main {
   }
 }
 
+a {
+  text-decoration: none;
+  color: var(--font-color-two);
+}
+
 section {
   width: 220px;
   margin: 10px auto;
@@ -272,6 +282,16 @@ section {
 /*---------------*/
 
 .spotify-embeded {
-  position: relative;
   top: 60%;
+  background-color: var(--background-color-two);
+}
+
+.home-container {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--background-color-two);
+  h3 {
+    color: var(--font-color-one);
+    margin: 10px 0px;
+  }
 }

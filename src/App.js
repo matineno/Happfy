@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Header from './components/Header';
 import Menu from './components/Menu';
 import SpotifyEmbed from './components/SpotifyEmbed';
@@ -25,22 +25,26 @@ function App() {
             <Header />
           </header>
           <main>
+            <Routes>
+              {/* Route for Home */}
+              <Route path='/home' element={<Home />} />
+              <Route path='/radio' element={<Radio />} />
+              <Route path='/recentlyadded' element={<RecentlyAdded />} />
+              <Route path='/artists' element={<Artists />} />
+              <Route path='/albums' element={<Albums />} />
+              <Route path='/songs' element={<Songs />} />
+              <Route path='/spotifystore' element={<SpotifyStore />} />
+              <Route path='/allplaylists' element={<AllPlaylists />} />
+              <Route path='/favouritesongs' element={<FavouriteSongs />} />
+              
+              {/* Add a default route that redirects to Home */}
+              <Route path='/' element={<Navigate to="/home" />} />
+            </Routes>
             <SpotifyEmbed />
           </main>
-          <Routes>
-            <Route path='/home' element={<Home />} />
-            <Route path='/radio' element={<Radio />} />
-            <Route path='/recentlyadded' element={<RecentlyAdded />} />
-            <Route path='/artists' element={<Artists />} />
-            <Route path='/albums' element={<Albums />} />
-            <Route path='/songs' element={<Songs />} />
-            <Route path='/spotifystore' element={<SpotifyStore />} />
-            <Route path='/allplaylists' element={<AllPlaylists />} />
-            <Route path='/favouritesongs' element={<FavouriteSongs />} />
-          </Routes>
         </div>
       </div>
-    </Router> 
+    </Router>
   );
 }
 

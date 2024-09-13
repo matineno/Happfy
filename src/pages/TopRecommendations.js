@@ -5,7 +5,7 @@ function TopRecommendations() {
     const [recommendations, setRecommendations] = useState([]);
     const token = useSpotifyToken();
 
-    async function fetchWebApi(endpoint, method, body) {
+    async function fetchWebApi() {
         const res = await fetch(`https://api.spotify.com/${endpoint}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
