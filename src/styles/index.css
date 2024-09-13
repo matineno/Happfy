@@ -287,11 +287,21 @@ section {
 }
 
 .home-container {
-  width: 100%;
+  width: (100vw - 240px);
   padding: 20px;
   background-color: var(--background-color-two);
   h3 {
     color: var(--font-color-one);
     margin: 10px 0px;
+  }
+  img {
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+
+  }
+  div + div {
+    margin-left: 20px;
+    border-radius: 20px;
   }
 }
