@@ -33,7 +33,7 @@ body {
 .body {
   width: 100svw;
   height: 100svh;
-  background-color: #fff;
+  background-color: var(--background-color-one);
   margin: 0 auto;
   position: absolute;
 }
@@ -86,10 +86,15 @@ ul {
 .menu-window {
   width: 300px;
   background-color: var(--background-color-one);
+  position: fixed;
+  z-index: 999;
 }
 
 .main-window {
-  width: 100%;
+  width: calc(100% - 300px);
+  position: relative;
+  z-index: 1;
+  left: 300px;
 }
 
 /*---------------*/
@@ -101,10 +106,14 @@ header {
   line-height: 56px;
   background-color: var(--background-color-one);
   height: 60px;
-  .header-content {
-    width: (100% - 300px);
-    display: flex;
-  }
+  width: calc(100% - 300px);
+  position: fixed;
+  z-index: 999;
+}
+
+.header-content {
+  display: flex;
+  
 }
 
 .header {
@@ -239,6 +248,7 @@ input[type="range"]::-moz-range-thumb {
 main {
   background-color: var(--background-color-two);
   position: relative;
+  top: 60px;
   height: 100vh;
 }
 

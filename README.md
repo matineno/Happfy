@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Happfy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Happfy is a sleek music application built with React and powered by the Spotify API. The user interface is inspired by the minimalist design of Apple Music, offering users an intuitive and visually appealing experience for exploring playlists.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Spotify Playlist Fetching:** Browse and view playlists fetched directly from the Spotify API.
+- **Apple Music-Inspired UI:** Enjoy a clean, minimalist interface similar to Apple Music, built with React.
+- **React Icons:** User-friendly icons for easy navigation and interaction.
+- **Responsive Design:** Optimized for all screen sizes, including mobile and desktop.
 
-### `npm start`
+*Note: Music playback is currently under development.*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React (JavaScript)
+- **API:** Spotify Web API
+- **Icons:** React Icons
+- **Version Control:** Git & GitHub
+- **CSS:** Styled Components / CSS Modules (or your preferred styling method)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Make sure you have the following installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- A Spotify Developer account to obtain your **client ID** and **client secret**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository:**
 
-### `npm run eject`
+    ```bash
+    git clone https://github.com/matineno/happfy.git
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Navigate to the project directory:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    cd happfy
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Install the dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-## Learn More
+4. **Set up environment variables:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Create a `.env` file in the root directory and add your Spotify credentials:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    REACT_APP_SPOTIFY_CLIENT_ID=your-client-id
+    REACT_APP_SPOTIFY_CLIENT_SECRET=your-client-secret
+    REACT_APP_SPOTIFY_REDIRECT_URI=http://localhost:3000/callback
+    ```
 
-### Code Splitting
+5. **Run the app:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```bash
+    npm start
+    # or
+    yarn start
+    ```
 
-### Analyzing the Bundle Size
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## User Interface
 
-### Making a Progressive Web App
+The **Happfy** app features a UI inspired by **Apple Music**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Minimalist Design:** Focused on simplicity and ease of use, with a visually clean layout.
+- **React Icons:** Enhances navigation and interaction with user-friendly, recognizable icons.
+- **Responsive Layout(Coming soon):** The UI adapts to all screen sizes, making it accessible on both desktop and mobile devices.
 
-### Advanced Configuration
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 1. Home Page
 
-### Deployment
+![Home Page](src/img/happify-screenshot-homepage.png)
+![Home Page](src/img/happify-screenshot-homepage-2.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 2. Playlist View
 
-### `npm run build` fails to minify
+![Playlist View](src/img/happify-screenshot-playlist.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 3. Responsive Design on Mobile (--Coming Soon--)
+
+![Mobile View]()
+
+## Project Structure
+
+```bash
+├── public
+├── src
+│   ├── components        # Reusable UI components
+│   ├── img               # Images and icons
+│   ├── pages             # Application pages (Home, Playlist)
+│   ├── styles            # Styles (CSS, Styled Components)
+│   ├── app.js            # Main app structure
+│   ├── index.js          # Entry point
+├── .env
+├── package.json
+├── README.md
