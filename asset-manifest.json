@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/happify/static/css/main.1b2bae50.css",
+    "main.css": "/happify/static/css/main.3263c790.css",
     "main.js": "/happify/static/js/main.2db6c6d2.js",
     "static/media/happify-logo.png": "/happify/static/media/happify-logo.28da60f604e01a0e48ca.png",
     "index.html": "/happify/index.html",
-    "main.1b2bae50.css.map": "/happify/static/css/main.1b2bae50.css.map",
+    "main.3263c790.css.map": "/happify/static/css/main.3263c790.css.map",
     "main.2db6c6d2.js.map": "/happify/static/js/main.2db6c6d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b2bae50.css",
+    "static/css/main.3263c790.css",
     "static/js/main.2db6c6d2.js"
   ]
 }
